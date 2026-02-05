@@ -1,0 +1,673 @@
+/* ------------------------------
+   Global Styles
+------------------------------ */
+body {
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+.gold {
+  color: #d4af37; /* Premium golden color */
+}
+
+/* ------------------------------
+   Sticky Glassmorphic Header
+------------------------------ */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 35px;
+  background: rgb(0 0 0 / 60%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+.main-header:hover {
+  background: rgba(18, 18, 20, 0.8);
+}
+
+.main-header .logo img {
+  height: 42px;
+}
+
+.main-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.main-header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.main-header nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #f5b921;
+  transition: width 0.3s ease;
+}
+
+.main-header nav ul li a:hover::after {
+  width: 100%;
+}
+
+.main-header nav ul li a:hover {
+  color: #f5b921;
+}
+
+/* ------------------------------
+   Hero Section (Banner)
+------------------------------ */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 55%;
+  left: 2%;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.hero-btn {
+  background: #d4af37;
+  color: #000;
+  padding: 12px 28px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+
+.hero-comment-btn{
+  margin-left: 80vw;
+  background: #d4af37;
+  color: #000;
+  padding: 12px 28px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+
+.hero-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.hero-slider img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.hero-slider img.active {
+  opacity: 1;
+}
+
+/* ------------------------------
+   Popular Bikes Section
+------------------------------ */
+.popular-bikes {
+  padding: 80px 60px;
+  background: #1a1a1a;
+}
+
+.popular-bikes h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 40px;
+  border-left: 4px solid #d4af37;
+  padding-left: 10px;
+}
+
+.bike-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bike-card {
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  width: 390px;
+}
+
+.bike-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #d4af37;
+}
+
+.bike-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.bike-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.bike-info h3 {
+  margin: 0 0 10px;
+}
+
+.explore-btn {
+  background: #d4af37;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.explore-btn:hover {
+  background: #fff;
+}
+
+/* ------------------------------
+   Ride Section
+------------------------------ */
+.ride-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.ride-left,
+.ride-right {
+  flex: 1 1 400px;
+}
+
+.ride-right p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.ride-description {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-left: 4px solid #d4af37;
+  border-radius: 8px;
+}
+
+.ride-description .gold-text {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.ride-description .highlight {
+  color: #f2c94c;
+  font-style: italic;
+}
+
+.ride-description .ride-quote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+  margin: 10px 0;
+}
+
+.ride-description .ride-tagline {
+  color: #b00202;
+  font-size: 1.4rem;
+  display: block;
+  margin-top: 20px;
+  font-family: 'Barlow', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------
+   Video Section
+------------------------------ */
+.rides-video {
+  background: #111;
+  padding: 60px;
+  text-align: center;
+}
+
+.video-container {
+  max-width: 800px;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* ------------------------------
+   Testimonials
+------------------------------ */
+.testimonials {
+  background: #1a1a1a;
+  padding: 60px;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.testimonial {
+  background: #222;
+  padding: 20px;
+  border-left: 4px solid #d4af37;
+  width: 300px;
+  font-style: italic;
+}
+
+/* ------------------------------
+   Gallery
+------------------------------ */
+.bike-gallery {
+  background: #121212;
+  padding: 60px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #8e7625;
+}
+
+
+
+.comment-input
+{
+  padding: 22px 90px;
+    border-radius: 14px;
+    background: #151313;
+    text-align: left;
+    color: white;
+}
+
+.comment-submit
+{
+  margin: 0px 59px;
+  
+    background: #d4af37;
+    color: #000;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 4px;
+}
+/* ------------------------------
+   Footer Modern Style
+------------------------------ */
+.main-footer {
+  background: #111;
+  color: #fff;
+  padding: 50px 60px 25px;
+  border-top: 2px solid #d4af37;
+  border-radius: 15px 15px 0 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.footer-content div {
+  flex: 1 1 250px;
+}
+
+.footer-about .footer-logo {
+  width: 160px;
+  margin-bottom: 12px;
+}
+
+.footer-about p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a img {
+  width: 28px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.3);
+}
+
+.footer-contact h4,
+.footer-comment-box h4 {
+  color: #d4af37;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Comment Box */
+/* Make textarea and button inline */
+.comment-form {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.comment-input {
+  flex: 1;
+  padding: 10px 40px;
+  border-radius: 12px;
+  background: #1b1b1b;
+  color: #fff;
+  border: 1px solid #333;
+  resize: none;
+  min-height: 80px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.comment-input::placeholder {
+  color: #888;
+}
+
+.comment-input:focus {
+  border-color: #d4af37;
+  outline: none;
+  background: #222;
+}
+
+.comment-submit {
+  padding: 0 25px;
+  min-height: 45px; /* Match textarea height */
+  background: #d4af37;
+  color: #000;
+  font-weight: bold;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.comment-submit:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Responsive: Stack on small screens */
+@media (max-width: 480px) {
+  .comment-form {
+    flex-direction: column;
+  }
+  .comment-submit {
+    min-height: auto;
+    padding: 10px 0;
+  }
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 22px;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 40px 20px 20px;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .footer-about .footer-logo {
+    width: 140px;
+  }
+}
+
+/* ------------------------------
+   Responsive Fixes
+------------------------------ */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 10px 16px;
+    flex-wrap: wrap;
+  }
+
+  .main-header .logo img {
+    height: 32px;
+  }
+
+  .main-header nav {
+    flex: 1 1 auto;
+  }
+
+  .main-header nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    margin: 10px 0 0;
+  }
+
+  .main-header nav ul li a {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+
+.hero-section {
+  height: 75vh;
+}
+
+.hero-text {
+  top: 55%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 90%;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+
+  .bike-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ride-description {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .rides-video {
+    padding: 30px 15px;
+  }
+
+  .testimonials {
+    padding: 40px 20px;
+  }
+
+  .bike-gallery {
+    padding: 40px 20px;
+  }
+
+  .main-footer {
+    padding: 30px 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header .logo img {
+    height: 23px;
+  }
+
+  .main-header nav ul {
+    gap: 9px;
+  }
+
+  .main-header nav ul li a {
+    font-size: 0.85rem;
+  }
+
+    .main-header nav ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    }
+
+ .hero-section {
+  height: 30vh;
+}
+
+.hero-text h1 {
+  font-size: 1.4rem;
+}
+
+.hero-text p {
+  font-size: 0.9rem;
+}
+
+.hero-btn {
+  font-size: 0.85rem;
+  padding: 9px 12px;
+}
+
+
+
+  .bike-card {
+    width: 100%;
+  }
+
+  .video-container {
+    padding: 0 10px;
+  }
+
+  .explore-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .testimonial {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .popular-bikes h2,
+  .testimonials h2,
+  .bike-gallery h2 {
+    font-size: 1.5rem;
+  }
+
+  .ride-description .ride-tagline {
+    font-size: 1rem;
+  }
+}

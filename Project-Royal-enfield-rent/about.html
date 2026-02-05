@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Royal Enfield Rent</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+/* About Page - Unique Styles Only */
+
+.about-hero {
+  background: url('assets/images/about .jpg') center/cover no-repeat;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.about-hero h1 {
+  position: relative;
+  font-size: 3rem;
+  z-index: 1;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.about-video {
+  padding: 10px 20px;
+  text-align: center;
+  background: #111;
+  color: #fff;
+}
+
+.about-video h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #d4af37;
+}
+
+.about-video video {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .about-video h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: 40vh;
+  }
+
+  .about-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-content {
+    padding: 0 10px;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+
+  .about-video {
+    padding: 10px;
+  }
+
+  .about-video video {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.php"><img src="assets/images/logo.svg" alt="Royal Enfield" /></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="motorcycles.php">Motorcycles</a></li>
+        <li><a href="rides.php">Rides</a></li>
+        <li><a href="user/booking-check.php">Bookings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+
+
+  <section class="about-hero">
+    <h1>About Royal Enfield Rent</h1>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content">
+    <h2>Our Journey</h2>
+    <p>
+      Royal Enfield Rent is built for bike lovers who crave the thrill of the road.
+      We make it simple to rent legendary Royal Enfield motorcycles with ease, comfort, and trust.
+      Whether you're planning a long ride through the mountains or a weekend escape,
+      we offer a wide range of bikes and a smooth booking experience to get you going.
+    </p>
+
+    <p>
+      Our mission is to bring the true joy of riding to everyone – with affordable prices,
+      flexible rentals, and a strong commitment to safety and service. Join thousands of happy riders who trust us.
+    </p>
+
+    <p>
+      Ride. Explore. Create stories worth remembering – with Royal Enfield Rent.
+    </p>
+    <section class="about-video">
+      <h2>The Royal Ride Journey</h2>
+      <video controls poster="assets/videos/royalride">
+        <source src="assets/videos/royalride.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </section>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2025 Royal Enfield Rent. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
