@@ -37,4 +37,6 @@ The system follows a classic **Model-View-Controller (MVC)** pattern using PHP:
 *(Note: If you change the folder name, update the URL accordingly.)*
 
 ## 📸 UI Preview
-*(Add your project screenshots here)*
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/742dbe17-4e84-42a1-977c-9508cad1e77a" />
+
+
