@@ -10,7 +10,3 @@ function rotateSlide() {
   current = (current + 1) % slides.length;
 }
 setInterval(rotateSlide, 4000);
-
-
-
-
