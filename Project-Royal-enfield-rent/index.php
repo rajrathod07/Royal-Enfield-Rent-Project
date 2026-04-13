@@ -201,8 +201,6 @@ if (isset($_POST['submit_comment'])) {
   <a href="rides.php#feedbackSection" class="hero-comment-btn">View Feedback</a>
 </div>
 </footer>
-
-
 </body>
 
 </html>
