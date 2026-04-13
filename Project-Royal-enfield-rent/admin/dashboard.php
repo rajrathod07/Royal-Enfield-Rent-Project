@@ -85,6 +85,6 @@ $username = $_SESSION['username'];
     <a href="logout.php" class="shortcut"><i class="fas fa-sign-out-alt"></i>Logout</a>
   </div>
 </div>
-
+    
 </body>
 </html>
