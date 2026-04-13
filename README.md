@@ -41,4 +41,3 @@ The system follows a classic **Model-View-Controller (MVC)** pattern using PHP:
 ## 📸 UI Preview
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/742dbe17-4e84-42a1-977c-9508cad1e77a" />
 
-
