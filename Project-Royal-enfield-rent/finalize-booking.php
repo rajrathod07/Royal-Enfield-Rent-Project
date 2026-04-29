@@ -2,7 +2,7 @@
 session_start();
 include 'includes/db.php';
 
-// ✅ Check session and request method
+// Check session and request method
 if (!isset($_SESSION['booking']) || $_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("Location: motorcycles.php");
     exit;
@@ -11,11 +11,11 @@ if (!isset($_SESSION['booking']) || $_SERVER['REQUEST_METHOD'] !== 'POST') {
 $booking = $_SESSION['booking'];
 $payment_method = $_POST['payment_method'] ?? 'Unknown';
 
-// ✅ Set booking and payment status
+// Set booking and payment status
 $status = ($payment_method === "Pay on Pickup") ? "Pending" : "Booked";
 $payment_status = ($payment_method === "Pay on Pickup") ? "Unpaid" : "Paid";
 
-// ✅ Get user_id from session
+// Get user_id from session
 $user_id = $_SESSION['user_id'] ?? null;
 if (!$user_id) {
     header("Location: user/auth.php?redirect=dashboard&status=$status");
@@ -23,7 +23,7 @@ if (!$user_id) {
 }
 
 
-// ✅ Prepare insert query (now including payment_status)
+// Prepare insert query (now including payment_status)
 $stmt = $conn->prepare("
     INSERT INTO rentals 
     (user_id, bike_id, mobile, aadhaar, pickup_date, return_date, total_days, total_cost, 
@@ -35,7 +35,7 @@ if (!$stmt) {
     die("Prepare failed: " . $conn->error);
 }
 
-// ✅ Bind parameters
+// Bind parameters
 $stmt->bind_param(
     "iissssddssdsss",
     $user_id,
@@ -54,7 +54,7 @@ $stmt->bind_param(
     $payment_status
 );
 
-// ✅ Execute and update availability
+// Execute and update availability
 if ($stmt->execute()) {
     // Make bike unavailable
     $bike_id = $booking['bike_id'];
